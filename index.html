@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Шымкент — Погода и Интересные Места</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #D6FF6B;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .btn {
+      background-color: #5988FF;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #FD98FB;
+    }
+
+    .section {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Шымкент — Город Солнца</h1>
+  </header>
+
+  <nav>
+    <button class="btn" onclick="showSection('facts')">Факты о Шымкенте</button>
+    <button class="btn" onclick="showSection('places')">Достопримечательности</button>
+  </nav>
+
+  <div id="facts" class="section">
+    <h2>Интересные факты о Шымкенте</h2>
+    <ul>
+      <li>Шымкент — третий по численности город в Казахстане.</li>
+      <li>Основан более 2200 лет назад.</li>
+      <li>Мягкий климат и много солнечных дней.</li>
+      <li>Город славится парками и базарами.</li>
+      <li>Каждый год проходят культурные фестивали.</li>
+    </ul>
+  </div>
+
+  <div id="places" class="section">
+    <h2>Куда сходить в Шымкенте</h2>
+    <ul>
+      <li><b>Парк имени Абая</b> — отличное место для прогулок.</li>
+      <li><b>Этноаул "Казах ауылы"</b> — окунись в традиции Казахстана.</li>
+      <li><b>Зоопарк Шымкента</b> — один из крупнейших в стране.</li>
+      <li><b>Базар "Самал"</b> — атмосферное место с уличной едой.</li>
+      <li><b>Горы Каратау</b> — отличное место для пикников и хайка.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    // Показать первую секцию при загрузке
+    showSection('facts');
+  </script>
+
+</body>
+</html>
